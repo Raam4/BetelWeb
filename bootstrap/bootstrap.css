@@ -3871,7 +3871,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: large;
   color: #0d6efd;
   text-decoration: none;
@@ -10865,10 +10865,13 @@ textarea.form-control-lg {
   }
 }
 
-#h1ofertas{
+.ffofertas{
   text-decoration: underline red;
-  font-family: 'Marck Script', cursive;
   color: #fff;
+}
+
+.fst-ulala{
+  font-family: 'Marck Script', cursive;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

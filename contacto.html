@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!--HEADER-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
@@ -24,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ofertas</a>
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -44,11 +43,12 @@
                             <a class="nav-link" href=#>Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ubicacion.html">Donde encontrarnos</a>
+                            <a class="nav-link" href=#>Donde encontrarnos</a>
                         </li>
                     </ul>
                     <span class="navbar-text pt-4 mb-0">
-                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo permanece...&quot;</p>
+                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo
+                            permanece...&quot;</p>
                     </span>
                 </div>
             </div>
@@ -57,18 +57,40 @@
     </header>
     <!--HEADER-->
 
-    <div class="container-fluid text-center" role="main">
-        <h1 class="ffofertas fst-ulala">Ofertas del Mes</h1>
-        <div class="row">
-            <div class="card bg-dark" style="width: 18rem;">
-                <img src="src/saco1.jpg" class="card-img-top mt-2" alt="primer-oferta">
-                <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
-                <div class="card-body py-1 text-white-50">
-                    <p class="card-text fs-5">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <p class="card-text"><small class="text-muted">Disponible hasta</small></p>
+    <div class="container w-50">
+        <div class="card bg-dark p-3">
+            <form>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+                    </div>
+
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" placeholder="Correo electronico" id="correo">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Número de celular" id="cel">
+                    </div>
+
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Provincia" id="prov">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Ciudad" id="city">
+                    </div>
+
+                    <!--combo com o cf-->
+
+                    <div class="col-md-12">
+                        <textarea type="text" class="form-control" placeholder="Mensaje" id="msj"></textarea>
+                    </div>
                 </div>
-            </div>
+
+            </form>
         </div>
     </div>
 
