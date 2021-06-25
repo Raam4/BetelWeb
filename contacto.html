@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
     <script src="./bootstrap/bootstrap.bundle.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
+    <script src="validaciones.js">
+    </script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
                             <a class="nav-link" href=#>Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=#>Donde encontrarnos</a>
+                            <a class="nav-link" href="ubicacion.html">Donde encontrarnos</a>
                         </li>
                     </ul>
                     <span class="navbar-text pt-4 mb-0">
@@ -58,38 +60,81 @@
     <!--HEADER-->
 
     <div class="container w-50">
+        <h1 class="ffofertas fst-ulala text-center">Contacte con nosotros</h1>
         <div class="card bg-dark p-3">
-            <form>
+            <form name="contactoForm">
 
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombre">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+                        <input type="text" class="form-control" placeholder="Apellido" name="apellido">
                     </div>
 
                     <div class="col-md-7">
-                        <input type="text" class="form-control" placeholder="Correo electronico" id="correo">
+                        <input type="text" class="form-control" placeholder="Correo electronico" name="correo" id="correo">
                     </div>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="Número de celular" id="cel">
+                        <input type="text" class="form-control" placeholder="Número de celular" name="cel" maxlength="10" onkeyup="numeros(this.value, this)">
                     </div>
 
                     <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="Provincia" id="prov">
+                        <select class="form-select" name="prov">
+                            <option selected disabled>Provincia...</option>
+                            <option value="Buenos Aires">Bs. As.</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Cordoba">Cordoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Entre Rios">Entre Rios</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquen">Neuquen</option>
+                            <option value="Rio Negro">Rio Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Sgo. del Estero">Sgo. del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucuman">Tucuman</option>
+                        </select>
                     </div>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="Ciudad" id="city">
+                        <input type="text" class="form-control" placeholder="Ciudad" name="city">
                     </div>
-
-                    <!--combo com o cf-->
+                    <div class="col-md-4">
+                        <select class="form-select" name="fiscal" id="fiscal" onchange="showInp()">
+                            <option value="None" selected disabled>Condici&oacute;n Fiscal</option>
+                            <option value="RI">Responsable Inscripto</option>
+                            <option value="Monotributo">Monotributista</option>
+                            <option value="CF">Consumidor Final</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12" name="cuit" id="cuit">
+                        <div class="row g-3">
+                            <div class="col-md-1 pt-2 pe-0"><span class="text-white">CUIT:</span></div>
+                            <div class="col-md-2 w-7 px-0"><input type="text" class="form-control" name="cod-gen" maxlength="2" onkeyup="numeros(this.value, this)"></div>
+                            <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span></div>
+                            <div class="col-md-dni px-0"><input type="text" class="form-control" name="dni" maxlength="8" onkeyup="numeros(this.value, this)"></div>
+                            <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span></div>
+                            <div class="col-md-1 w-5 px-0"><input type="text" class="form-control" name="cod-ver" maxlength="1" onkeyup="numeros(this.value, this)"></div>
+                        </div>
+                    </div>
 
                     <div class="col-md-12">
-                        <textarea type="text" class="form-control" placeholder="Mensaje" id="msj"></textarea>
+                        <textarea class="form-control" placeholder="Mensaje" name="msj" id="msj"></textarea>
                     </div>
                 </div>
-
+                <input type="button" value="Enviar" class="btn btn-danger mt-2" onclick="validador()">
+                <input type="button" value="Limpiar" class="btn btn-outline-danger mt-2" onclick="limpiar()">
             </form>
         </div>
     </div>
