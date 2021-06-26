@@ -1,41 +1,45 @@
+
 function validador() {
+    var msj = document.getElementById("msj");
+    var prov = document.getElementById("prov");
     var ok = true;
     var formulario = document.contactoForm;
     for (var i = 0; i <= 4; i++) {
         if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)) {
-            formulario[i].style.borderColor = "red";
+            formulario[i].style.border = "solid 2px red";
             ok = false;
         } else {
             formulario[i].style.borderColor = "";
             ok = validarEmail();
         }
     }
-    if (document.getElementById("msj").value == "") {
-        alert('Debe ingresar un mensaje.');
-        ok = false;
+    
+    if(ok = validarFecha(document.getElementById("date"))){
+        document.getElementById("date").style.border = "";
+    }else{
+        document.getElementById("date").style.border = "solid 2px red";
     }
-    if (document.getElementById("cuit").style.display != "none") {
-        //asdasdasda
+
+    if (prov.value == "") {
+        prov.style.border = "solid 2px red";
+        ok = false;
+    }else{
+        msj.style.border = "";
+    }
+    if (msj.value == "") {
+        msj.style.border = "solid 2px red";
+        ok = false;
+    }else{
+        msj.style.border = "";
     }
     if (ok) {
         formulario.reset();
-    } else {
-        alert('Revise los campos marcados');
     }
 }
 
 function limpiar() {
     document.getElementById("cuit").style.display = "none";
     document.contactoForm.reset();
-}
-
-function validarCuit() {
-    var cuit = [document.getElementById("cod-gen"), document.getElementById("dni"), document.getElementById("cod-ver")];
-    for (var i = 0; i <= 2; i++) {
-        if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)) {
-            //asdasdasdasd
-        }
-    }
 }
 
 function validarEmail() {
@@ -56,8 +60,6 @@ function showInp() {
     condFiscal = document.getElementById("fiscal").value;
     if (condFiscal == "RI" || condFiscal == "Monotributo") {
         document.getElementById("cuit").style.display = "inline-block";
-    } else {
-        document.getElementById("cuit").style.display = "none";
     }
 }
 
@@ -72,5 +74,14 @@ function numeros(string, elem) {//Solo numeros
         else{
             elem.style.borderColor = "";
         }
+    }
+}
+
+function validarFecha(campo) {
+    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+    if ((campo.value.match(RegExPattern)) && (campo!='')) {
+        return true;
+    } else {
+        return false;
     }
 }
