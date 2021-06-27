@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <script src="filtro.js"></script>
+    <title>Betel Tu Estilo Neuquen</title>
+    <script>
+        //window.onbeforeunload = todo(document.getElementById('todo'), true);
+        window.onunload = function(){location.href = "productos.html?prod=todo";alert("algo")};
+    </script>
+</head>
+
+<body onload="alCargar(recuperaParam('prod'))">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" href="index.html"><img src="src/LOGO.jpg" alt="logoBetel" width="200"
+                        height="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Ambos</a></li>
+                                <li><a class="dropdown-item" href="#">Sacos y Chalecos</a></li>
+                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="#">Street</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ubicacion.html">Donde encontrarnos</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text pt-4 mb-0">
+                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo
+                            permanece...&quot;</p>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group card bg-dark">
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" id="todo" onclick="todo(this, false)">
+                        Todo
+                    </label>
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="ambo" name="filter"
+                            onclick="filtros(this, true)">
+                        Ambos
+                    </label>
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="saco" name="filter"
+                            onclick="filtros(this, true)">
+                        Sacos y Chalecos
+                    </label>
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="pantalon" name="filter"
+                            onclick="filtros(this, true)">
+                        Pantalones
+                    </label>
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="camisa" name="filter"
+                            onclick="filtros(this, true)">
+                        Camisas
+                    </label>
+                    <label class="list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="accesorio" name="filter"
+                            onclick="filtros(this, true)">
+                        Accesorios
+                    </label>
+                    <label class=" list-group-item bg-dark text-white">
+                        <input class="form-check-input me-1" type="checkbox" value="street" name="filter"
+                            onclick="filtros(this, true)">
+                        Street
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="accesorio">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer class="page-footer font-small teal pt-4">
+        <hr>
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-1">
+                    <h5 class="text-lowercase font-weight-bold"><span class="text-capitalize">Betel</span> Tu Estilo
+                    </h5>
+                    <p id="footerText">Tienda de indumentaria masculina, ubicada en el oeste de la capital de
+                        Neuqu&eacute;n.
+                        Vendemos productos de fabricaci&oacute;n propia con telas de primer&iacute;sima
+                        calidad, para vestir a hombres y niños con un estilo &uacute;nico.
+                    </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <div class="container">
+                        <div class="row">
+                            <h4 class="text-white-50">Contactanos en las redes:</h4>
+                            <div class="col-md-12 my-3">
+                                <div class="mb-1 flex-center">
+                                    <a class="btnredes mx-2" href="https://www.facebook.com/BetelNqn">
+                                        <img src="src/facebook.svg" alt="iconoFacebook" width="50" height="50">
+                                    </a>
+                                    <a class="btnredes mx-2" href="https://www.instagram.com/BetelNqn">
+                                        <img src="src/instagram.svg" alt="iconoInstagram" width="50" height="50">
+                                    </a>
+                                    <a class="btnredes mx-2" href="https://api.whatsapp.com/send?phone=542996595028">
+                                        <img src="src/point.svg" alt="iconoWhatsapp" width="50" height="50">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center"><span id="cprg">© 2021 Copyright:</span>
+            <a href="#">Ozodrac</a>
+        </div>
+    </footer>
+</body>
+
+</html>

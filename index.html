@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
     <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <script src="filtro.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
 </head>
 
@@ -13,8 +14,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" aria-current="page" href="#"><img src="src/LOGO.jpg" alt="logoBetel"
-                        width="200" height="100"></a>
+                <a class="navbar-brand" aria-current="page" href="#"><img src="src/LOGO.jpg" alt="logoBetel" width="200"
+                        height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +32,12 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Ambos</a></li>
-                                <li><a class="dropdown-item" href="#">Sacos y Chalecos</a></li>
-                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
-                                <li><a class="dropdown-item" href="#">Street</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=ambo" onclick="pasaParam(href)">Ambos</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=saco" onclick="pasaParam(href)">Sacos y Chalecos</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=pantalon" onclick="pasaParam(href)">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=camisa" onclick="pasaParam(href)">Camisas</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=accesorio" onclick="pasaParam(href)">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=street" onclick="pasaParam(href)">Street</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -47,7 +48,8 @@
                         </li>
                     </ul>
                     <span class="navbar-text pt-4 mb-0">
-                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo permanece...&quot;</p>
+                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo
+                            permanece...&quot;</p>
                     </span>
                 </div>
             </div>
@@ -106,12 +108,14 @@
         </div>
     </div>
     <footer class="page-footer font-small teal pt-4">
-    <hr>
+        <hr>
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <div class="col-md-6 mt-md-0 mt-1">
-                    <h5 class="text-lowercase font-weight-bold"><span class="text-capitalize">Betel</span> Tu Estilo</h5>
-                    <p id="footerText">Tienda de indumentaria masculina, ubicada en el oeste de la capital de Neuqu&eacute;n.
+                    <h5 class="text-lowercase font-weight-bold"><span class="text-capitalize">Betel</span> Tu Estilo
+                    </h5>
+                    <p id="footerText">Tienda de indumentaria masculina, ubicada en el oeste de la capital de
+                        Neuqu&eacute;n.
                         Vendemos productos de fabricaci&oacute;n propia con telas de primer&iacute;sima
                         calidad, para vestir a hombres y niños con un estilo &uacute;nico.
                     </p>
@@ -120,17 +124,17 @@
                 <div class="col-md-6 mb-md-0 mb-3">
                     <div class="container">
                         <div class="row">
-                            <h4 class="text-white">Seguinos en las redes:</h4>
+                            <h4 class="text-white-50">Contactanos en las redes:</h4>
                             <div class="col-md-12 my-3">
                                 <div class="mb-1 flex-center">
                                     <a class="btnredes mx-2" href="https://www.facebook.com/BetelNqn">
                                         <img src="src/facebook.svg" alt="iconoFacebook" width="50" height="50">
                                     </a>
                                     <a class="btnredes mx-2" href="https://www.instagram.com/BetelNqn">
-                                        <img src="src/instagram.svg" alt="iconoFacebook" width="50" height="50">
+                                        <img src="src/instagram.svg" alt="iconoInstagram" width="50" height="50">
                                     </a>
-                                    <a class="btnredes mx-2" href="https://goo.gl/maps/LgftDNZ23SUNJiGg7">
-                                        <img src="src/point.svg" alt="iconoFacebook" width="50" height="50">
+                                    <a class="btnredes mx-2" href="https://api.whatsapp.com/send?phone=542996595028">
+                                        <img src="src/point.svg" alt="iconoWhatsapp" width="50" height="50">
                                     </a>
                                 </div>
                             </div>

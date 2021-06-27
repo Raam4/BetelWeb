@@ -1,6 +1,6 @@
 
 function validador() {
-    var msj = document.getElementById("msj");
+    var fecha = document.getElementById("date");
     var prov = document.getElementById("prov");
     var ok = true;
     var formulario = document.contactoForm;
@@ -13,23 +13,18 @@ function validador() {
             ok = validarEmail();
         }
     }
-    
-    if(ok = validarFecha(document.getElementById("date"))){
-        document.getElementById("date").style.border = "";
-    }else{
-        document.getElementById("date").style.border = "solid 2px red";
+
+    if (validarFecha(fecha.value)) {
+        fecha.style.border = "";
+    } else {
+        fecha.style.border = "solid 2px red";
+        ok = false;
     }
 
     if (prov.value == "") {
         prov.style.border = "solid 2px red";
         ok = false;
-    }else{
-        msj.style.border = "";
-    }
-    if (msj.value == "") {
-        msj.style.border = "solid 2px red";
-        ok = false;
-    }else{
+    } else {
         msj.style.border = "";
     }
     if (ok) {
@@ -67,21 +62,65 @@ function numeros(string, elem) {//Solo numeros
     var filtro = '1234567890';//Caracteres validos
 
     //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
-    for (var i = 0; i < string.length; i++){
-        if (!(filtro.indexOf(string.charAt(i)) != -1)){
+    for (var i = 0; i < string.length; i++) {
+        if (!(filtro.indexOf(string.charAt(i)) != -1)) {
             elem.style.borderColor = "red";
         }
-        else{
+        else {
             elem.style.borderColor = "";
         }
     }
 }
 
-function validarFecha(campo) {
-    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-    if ((campo.value.match(RegExPattern)) && (campo!='')) {
-        return true;
-    } else {
-        return false;
+function validarFecha(elem) {
+    try {
+        var hoy = new Date();
+        var fec = new Date(elem);
+        if (fec <= hoy) {
+            estado = false;
+        } else {
+            var fecha = elem.split("-");
+            var ano = fecha[0];
+            var mes = fecha[1];
+            var dia = fecha[2];
+            var estado = true;
+
+            if ((dia.length == 2) && (mes.length == 2) && (ano.length == 4)) {
+                switch (parseInt(mes)) {
+                    case 1: dmax = 31; break;
+                    case 2: if (ano % 4 == 0) dmax = 29; else dmax = 28; break;
+                    case 3: dmax = 31; break;
+                    case 4: dmax = 30; break;
+                    case 5: dmax = 31; break;
+                    case 6: dmax = 30; break;
+                    case 7: dmax = 31; break;
+                    case 8: dmax = 31; break;
+                    case 9: dmax = 30; break;
+                    case 10: dmax = 31; break;
+                    case 11: dmax = 30; break;
+                    case 12: dmax = 31; break;
+                }
+
+                dmax != "" ? dmax : dmax = -1;
+
+                if ((dia >= 1) && (dia <= dmax) && (mes >= 1) && (mes <= 12)) {
+                    for (var i = 0; i < fecha[2].length; i++) {
+                        diaC = fecha[2].charAt(i).charCodeAt(0);
+                        (!((diaC > 47) && (diaC < 58))) ? estado = false : '';
+                        mesC = fecha[1].charAt(i).charCodeAt(0);
+                        (!((mesC > 47) && (mesC < 58))) ? estado = false : '';
+                    }
+
+                } for (var i = 0; i < fecha[0].length; i++) {
+
+                    anoC = fecha[0].charAt(i).charCodeAt(0);
+
+                    (!((anoC > 47) && (anoC < 58))) ? estado = false : '';
+                }
+            } else estado = false;
+        }
+    } catch (e) {
+        estado = false;
     }
+    return estado;
 }
