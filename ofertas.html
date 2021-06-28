@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stofertas.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="modal.css" media="screen" />
     <script src="./bootstrap/bootstrap.bundle.js"></script>
     <script src="filtro.js"></script>
+    <script src="modal.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
 </head>
 
@@ -67,18 +68,23 @@
         <hr>
     </header>
     <!--HEADER-->
-    
-    <div class="container-fluid w-85">
-        <h2 class="fst-ulala ffofertas text-center">Anuncios</h2>
 
+    <div class="container-fluid w-85">
+        <h2 class="fst-ulala ffofertas text-center">Anuncios y Promos</h2>
+        <div class="row">
+                <img src="src/tapaboca.jpg" id="myImg" style="width: 35%; height: 35%;" alt="Us&aacute; tapabocas" onclick="modal(this)">
+                <img src="src/promo.jpg" style="width: 30%; height: 35%;" alt="PROMO" onclick="modal(this)">
+                <img src="src/padre.jpg" style="width: 35%; height: 35%;" alt="D&iacute;a del Padre" onclick="modal(this)">
+            </div>
+        </div>
     </div>
     <br>
     <div class="container-fluid w-85">
         <h2 class="fst-ulala ffofertas text-center">Ofertas del Mes</h2>
         <div class="row">
             <div class="card bg-dark text-white oferta p-0 m-3" style="width: 335px;">
-                <img src="src/saco2.jpg" class="card-img oferta" alt="...">
-                <div class="card-img-overlay text-center">
+                <img src="src/saco2.jpg" class="card-img oferta" alt="..." id="bla">
+                <div class="card-img-overlay text-center" onclick="modal(document.getElementById('bla'))">
                     <h3 class="card-title oculta fst-ulala ffofertas">Card title</h3>
                     <p class="card-text oculta fs-5">This is a wider card with supporting text below as a natural
                         lead-in to
@@ -109,6 +115,14 @@
         </div>
     </div>
 
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script>
+        
+        </script>
     <!--FOOTER-->
     <footer class="page-footer font-small teal pt-4">
         <hr>

@@ -67,122 +67,113 @@
         <hr>
     </header>
     <!--HEADER-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                
-            </div>
-            <div class="col-md-6">
-                <div class="container-fluid">
-                    <div class="card bg-dark p-3">
-                        <h1 class="ffofertas fst-ulala text-center">Visite nuestra f&aacute;brica</h1>
-                        <p class="text-center text-white">(S&oacute;lo para comercios y empresas)</p>
-                        <form name="contactoForm">
 
-                            <div class="row g-3">
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="Apellido" name="apellido">
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
+    <div class="container-fluid w-50">
+        <div class="card bg-dark p-3">
+            <h1 class="ffofertas fst-ulala text-center">Visite nuestra f&aacute;brica</h1>
+            <p class="text-center text-white">(S&oacute;lo para comercios y empresas)</p>
+            <form name="contactoForm">
 
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Correo electronico"
-                                        name="correo" id="correo">
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
 
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="Número de celular" name="cel"
-                                        maxlength="10" onkeyup="numeros(this.value, this)">
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Correo electronico" name="correo"
+                            id="correo">
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
 
-                                <div class="col-md-5">
-                                    <select class="form-select" name="prov" id="prov">
-                                        <option selected disabled value="">Provincia...</option>
-                                        <option value="Buenos Aires">Bs. As.</option>
-                                        <option value="Catamarca">Catamarca</option>
-                                        <option value="Chaco">Chaco</option>
-                                        <option value="Chubut">Chubut</option>
-                                        <option value="Cordoba">Cordoba</option>
-                                        <option value="Corrientes">Corrientes</option>
-                                        <option value="Entre Rios">Entre Rios</option>
-                                        <option value="Formosa">Formosa</option>
-                                        <option value="Jujuy">Jujuy</option>
-                                        <option value="La Pampa">La Pampa</option>
-                                        <option value="La Rioja">La Rioja</option>
-                                        <option value="Mendoza">Mendoza</option>
-                                        <option value="Misiones">Misiones</option>
-                                        <option value="Neuquen">Neuquen</option>
-                                        <option value="Rio Negro">Rio Negro</option>
-                                        <option value="Salta">Salta</option>
-                                        <option value="San Juan">San Juan</option>
-                                        <option value="San Luis">San Luis</option>
-                                        <option value="Santa Cruz">Santa Cruz</option>
-                                        <option value="Santa Fe">Santa Fe</option>
-                                        <option value="Sgo. del Estero">Sgo. del Estero</option>
-                                        <option value="Tierra del Fuego">Tierra del Fuego</option>
-                                        <option value="Tucuman">Tucuman</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Número de celular" name="cel"
+                            maxlength="10" onkeyup="numeros(this.value, this)">
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
 
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="Ciudad" name="city">
-                                </div>
+                    <div class="col-md-5">
+                        <select class="form-select" name="prov" id="prov">
+                            <option selected disabled value="">Provincia...</option>
+                            <option value="Buenos Aires">Bs. As.</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Cordoba">Cordoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Entre Rios">Entre Rios</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquen">Neuquen</option>
+                            <option value="Rio Negro">Rio Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Sgo. del Estero">Sgo. del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucuman">Tucuman</option>
+                        </select>
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
 
-                                <div class="col-md-5">
-                                    <select class="form-select" name="fiscal" id="fiscal" onchange="showInp()">
-                                        <option value="None" selected disabled>Condici&oacute;n Fiscal</option>
-                                        <option value="RI">Responsable Inscripto</option>
-                                        <option value="Monotributo">Monotributista</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-0 text-white ps-0 me-2">*</div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Ciudad" name="city">
+                    </div>
 
-                                <div class="col-md-12" name="cuit" id="cuit">
-                                    <div class="row g-3">
-                                        <div class="col-md-1 pt-2 pe-0"><span class="text-white">CUIT:</span></div>
-                                        <div class="col-md-2 w-7 px-0"><input type="text" class="form-control"
-                                                name="cod-gen" maxlength="2" onkeyup="numeros(this.value, this)"></div>
-                                        <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span>
-                                        </div>
-                                        <div class="col-md-dni px-0"><input type="text" class="form-control" name="dni"
-                                                maxlength="8" onkeyup="numeros(this.value, this)"></div>
-                                        <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span>
-                                        </div>
-                                        <div class="col-md-1 w-5 px-0"><input type="text" class="form-control"
-                                                name="cod-ver" maxlength="1" onkeyup="numeros(this.value, this)"></div>
-                                        <div class="col-md-0 text-white ps-0 mx-2">*</div>
-                                    </div>
-                                </div>
+                    <div class="col-md-5">
+                        <select class="form-select" name="fiscal" id="fiscal" onchange="showInp()">
+                            <option value="None" selected disabled>Condici&oacute;n Fiscal</option>
+                            <option value="RI">Responsable Inscripto</option>
+                            <option value="Monotributo">Monotributista</option>
+                        </select>
+                    </div>
+                    <div class="col-md-0 text-white ps-0 me-2">*</div>
 
-                                <div class="col-md-12">
-                                    <span class="text-white fs-5 fw-bold">Fecha de visita:</span>
-                                    <input type="date" id="date">
-                                    <p class="text-white fst-italic mb-0">Sujeto a disponibilidad. Nosotros lo
-                                        contactaremos para coordinar el horario.</p>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" placeholder="Mensaje (opcional)" name="msj"
-                                        id="msj"></textarea>
-                                </div>
+                    <div class="col-md-12" name="cuit" id="cuit">
+                        <div class="row g-3">
+                            <div class="col-md-1 pt-2 pe-0"><span class="text-white">CUIT:</span></div>
+                            <div class="col-md-2 w-7 px-0"><input type="text" class="form-control" name="cod-gen"
+                                    maxlength="2" onkeyup="numeros(this.value, this)"></div>
+                            <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span>
                             </div>
-                            <p class="text-white">(*) Campos obligatorios</p>
-                            <input type="button" value="Enviar" class="btn btn-danger mt-2" onclick="validador()">
-                            <input type="button" value="Limpiar" class="btn btn-outline-danger mt-2"
-                                onclick="limpiar()">
-                        </form>
+                            <div class="col-md-dni px-0"><input type="text" class="form-control" name="dni"
+                                    maxlength="8" onkeyup="numeros(this.value, this)"></div>
+                            <div class="col-md-sp pt-2 px-0  text-center"><span class="text-white">-</span>
+                            </div>
+                            <div class="col-md-1 w-5 px-0"><input type="text" class="form-control" name="cod-ver"
+                                    maxlength="1" onkeyup="numeros(this.value, this)"></div>
+                            <div class="col-md-0 text-white ps-0 mx-2">*</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <span class="text-white fs-5 fw-bold">Fecha de visita:</span>
+                        <input type="date" id="date">
+                        <p class="text-white fst-italic mb-0">Sujeto a disponibilidad. Nosotros lo
+                            contactaremos para coordinar el horario.</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <textarea class="form-control" placeholder="Mensaje (opcional)" name="msj" id="msj"></textarea>
                     </div>
                 </div>
-            </div>
+                <p class="text-white">(*) Campos obligatorios</p>
+                <input type="button" value="Enviar" class="btn btn-danger mt-2" onclick="validador()">
+                <input type="button" value="Limpiar" class="btn btn-outline-danger mt-2" onclick="limpiar()">
+            </form>
         </div>
     </div>
+
     <!--FOOTER-->
     <footer class="page-footer font-small teal pt-4">
         <hr>
