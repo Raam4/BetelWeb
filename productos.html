@@ -9,8 +9,7 @@
     <script src="filtro.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
     <script>
-        //window.onbeforeunload = todo(document.getElementById('todo'), true);
-        window.onunload = function(){location.href = "productos.html?prod=todo";alert("algo")};
+        window.onunload = reload(param);
     </script>
 </head>
 
@@ -36,12 +35,13 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Ambos</a></li>
-                                <li><a class="dropdown-item" href="#">Sacos y Chalecos</a></li>
-                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
-                                <li><a class="dropdown-item" href="#">Street</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('todo')">Todo</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('ambo')">Ambos</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('saco')">Sacos y Chalecos</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('pantalon')">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('camisa')">Camisas</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('accesorio')">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="reload('street')">Street</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

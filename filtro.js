@@ -1,10 +1,11 @@
+//dentro de productos
 function todo(checkbox, val) {
     var checks = document.getElementsByName("filter");
     if (val) {
         for (var i = 0; i < checks.length; i++) {
             checkbox.checked = true;
             checks[i].checked = true;
-            mostrar(checks[i].value);
+            mostrar(checks[i].value, true);
         }
     } else {
         if (checkbox.checked) {
@@ -32,27 +33,37 @@ function filtros(checkbox, cond) {
         todo.checked = false;
     }
     if (checkbox.checked) {
-        mostrar(val);
+        mostrar(val, true);
+        verAll();
     } else {
-        ocultar(val);
+        mostrar(val, false);
     }
 }
 
-function mostrar(val) {
+function mostrar(val, cond) {
     var aMostrar = document.getElementsByName(val);
     for (var i = 0; i < aMostrar.length; i++) {
-        aMostrar[i].style.display = "flex";
+        if(cond){
+            aMostrar[i].style.display = "flex";
+        }else{
+            aMostrar[i].style.display = "none";
+        }
     }
 }
 
-function ocultar(val) {
-    var aMostrar = document.getElementsByName(val);
-    for (var i = 0; i < aMostrar.length; i++) {
-        aMostrar[i].style.display = "none";
+function verAll(){
+    var checkTodo = document.getElementById("todo");
+    var checks = document.getElementsByName("filter");
+    var all = true;
+    for (var i = 0; i < checks.length; i++) {
+        if(!(checks[i].checked)){
+            all = false;
+        }
+    }
+    if(all){
+        checkTodo.checked = true;
     }
 }
-
-
 //de otras pag a productos
 
 function pasaParam(enl) {
@@ -71,11 +82,15 @@ function alCargar(prod){
     for (var i = 0; i < checks.length; i++){
         if(checks[i].value == prod){
             checks[i].checked = true;
-            mostrar(prod);
+            mostrar(prod, true);
         }else if(prod == "todo"){
             todo(document.getElementById(prod), true);
         }else{
             checks[i].checked = false;
         }
     }
+}
+
+function reload(param){
+    location.href = "productos.html?prod=" + param;
 }

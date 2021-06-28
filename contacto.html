@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
     <script src="./bootstrap/bootstrap.bundle.js"></script>
-    <title>Betel Tu Estilo Neuquen</title>
+    <script src="filtro.js"></script>
     <script src="validaciones.js">
+    <title>Betel Tu Estilo Neuquen</title>
     </script>
 </head>
 
@@ -15,8 +16,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" aria-current="page" href="index.html"><img src="src/LOGO.jpg" alt="logoBetel"
-                        width="200" height="100"></a>
+                <a class="navbar-brand" aria-current="page" href="index.html"><img src="src/LOGO.jpg" alt="logoBetel" width="200"
+                        height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -33,16 +34,17 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Ambos</a></li>
-                                <li><a class="dropdown-item" href="#">Sacos y Chalecos</a></li>
-                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
-                                <li><a class="dropdown-item" href="#">Street</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=todo" onclick="pasaParam(href)">Todo</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=ambo" onclick="pasaParam(href)">Ambos</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=saco" onclick="pasaParam(href)">Sacos y Chalecos</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=pantalon" onclick="pasaParam(href)">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=camisa" onclick="pasaParam(href)">Camisas</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=accesorio" onclick="pasaParam(href)">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="productos.html?prod=street" onclick="pasaParam(href)">Street</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=#>Contacto</a>
+                            <a class="nav-link" href="#">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ubicacion.html">Donde encontrarnos</a>
