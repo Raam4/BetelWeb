@@ -6600,6 +6600,10 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
+.w-85 {
+  width: 85% !important;
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -7411,6 +7415,10 @@ textarea.form-control-lg {
 
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .text-reset {
@@ -10865,6 +10873,8 @@ textarea.form-control-lg {
   }
 }
 
+/*# sourceMappingURL=bootstrap.css.map */
+
 .ffofertas{
   text-decoration: underline red;
   color: #fff;
@@ -10898,5 +10908,15 @@ textarea.form-control-lg {
   width: 0.3333333333%;
 }
 
+.oculta {
+  display: none;
+}
 
-/*# sourceMappingURL=bootstrap.css.map */
+.card-img-overlay:hover .oculta {
+  display: block;
+}
+
+.oferta:hover img {
+  opacity: 0.3;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
