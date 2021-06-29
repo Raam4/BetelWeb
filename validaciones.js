@@ -58,10 +58,8 @@ function showInp() {
     }
 }
 
-function numeros(string, elem) {//Solo numeros
-    var filtro = '1234567890';//Caracteres validos
-
-    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
+function numeros(string, elem) {
+    var filtro = '1234567890';
     for (var i = 0; i < string.length; i++) {
         if (!(filtro.indexOf(string.charAt(i)) != -1)) {
             elem.style.borderColor = "red";
@@ -88,7 +86,7 @@ function validarFecha(elem) {
             if ((dia.length == 2) && (mes.length == 2) && (ano.length == 4)) {
                 switch (parseInt(mes)) {
                     case 1: dmax = 31; break;
-                    case 2: if (ano % 4 == 0) dmax = 29; else dmax = 28; break;
+                    case 2: if (ano % 4 == 0 && ano % 400 == 0) dmax = 29; else dmax = 28; break;
                     case 3: dmax = 31; break;
                     case 4: dmax = 30; break;
                     case 5: dmax = 31; break;
@@ -100,9 +98,7 @@ function validarFecha(elem) {
                     case 11: dmax = 30; break;
                     case 12: dmax = 31; break;
                 }
-
                 dmax != "" ? dmax : dmax = -1;
-
                 if ((dia >= 1) && (dia <= dmax) && (mes >= 1) && (mes <= 12)) {
                     for (var i = 0; i < fecha[2].length; i++) {
                         diaC = fecha[2].charAt(i).charCodeAt(0);
@@ -110,11 +106,8 @@ function validarFecha(elem) {
                         mesC = fecha[1].charAt(i).charCodeAt(0);
                         (!((mesC > 47) && (mesC < 58))) ? estado = false : '';
                     }
-
                 } for (var i = 0; i < fecha[0].length; i++) {
-
                     anoC = fecha[0].charAt(i).charCodeAt(0);
-
                     (!((anoC > 47) && (anoC < 58))) ? estado = false : '';
                 }
             } else estado = false;
