@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.css" media="screen" />
     <script src="./bootstrap/bootstrap.bundle.js"></script>
     <script src="filtro.js"></script>
+    <script src="modal.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
     <script>
         window.onunload = alCargar(recuperaParam('prod'));
@@ -107,7 +108,7 @@
                     <div class="row text-center">
 
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
-                            <img src="src/Ambos/gabardinaGris.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <img src="src/Ambos/gabardinaGris.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;" onclick="modal(this)">
                             <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
@@ -585,6 +586,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
         </div>
 
 
