@@ -7431,8 +7431,8 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.text-white-75 {
-  color: rgba(255, 255, 255, 0.75) !important;
+.text-white-85 {
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .text-reset {
@@ -10937,4 +10937,25 @@ textarea.form-control-lg {
 .oferta:hover img {
   opacity: 0.3;
   filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.carr-border{
+  border-width: 3.5px;
+  border-color: rgb(163, 163, 163);
+}
+
+.carr-cr{
+  border-style: solid none;
+}
+
+.carr-rt{
+  border-style: solid solid solid none;
+}
+
+.carr-lt{
+  border-style: solid none solid solid;
+}
+
+.carr-all{
+  border: 3.5px solid black;
 }

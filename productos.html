@@ -9,7 +9,7 @@
     <script src="filtro.js"></script>
     <title>Betel Tu Estilo Neuquen</title>
     <script>
-        window.onunload = reload(param);
+        window.onunload = alCargar(recuperaParam('prod'));
     </script>
 </head>
 
@@ -27,10 +27,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                            <a class="nav-link text-white-85" href="anunciosyofertas.html">Anuncios y Ofertas</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle text-white-85" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
@@ -45,14 +45,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link text-white-85" href="ubicacionycontacto.html">Donde encontrarnos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ubicacion.html">Donde encontrarnos</a>
+                            <a class="nav-link text-white-85" href="mayorista.html">Mayoristas</a>
                         </li>
                     </ul>
                     <span class="navbar-text pt-4 mb-0">
-                        <p class="fs-5 fst-italic fw-lighter">&quot;Las modas pasan. S&oacute;lo el estilo
+                        <p class="fs-5 fst-italic fw-lighter text-white-85">&quot;Las modas pasan. S&oacute;lo el estilo
                             permanece...&quot;</p>
                     </span>
                 </div>
@@ -105,54 +105,483 @@
             <div class="col-md-10">
                 <div class="container-fluid">
                     <div class="row text-center">
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Ambos/gabardinaGris.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/azulFrancia.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/GabardinaAzulM.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/GabardinaBeige.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/GabardinaBordo.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/GabardinaNegro.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/grisSatinado.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Satinado</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/Smoking.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Smoking</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/SmokingGris.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Smoking</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/Super100.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Super 100</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="ambo">
+                            <img src="src/Ambos/super100Negro.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Ambo Super 100</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Sacos/Saco Verde.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Gabardina</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Saco Blanco.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Sport</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Saco Cielo.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Sport</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Saco Mostaza.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Saco Amarillo.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Sport</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Saco Pana Bordo.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Saco Pana</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Gaban1.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Gaban</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Gaban2.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Gaban</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Gaban3.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Gaban</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Chaleco Beige.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Chaleco Liso</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="saco">
+                            <img src="src/Sacos/Chaleco Gris.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Chaleco Detalle</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Pantalones/jeanazul.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Jean</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/jeanceleste.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Jean</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/jeanroto.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Jean</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/bermudaazul.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Bermuda</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/bermudaceleste.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Bermuda</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/shortbanio.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Short Baño</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="pantalon">
+                            <img src="src/Pantalones/pantgabardina.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Pantalon Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Camisas/camisa1.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa2.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa3.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa4.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa5.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa6.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa7.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/camisa8.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/hawaiana1.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa Hawaiana</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/hawaiana2.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa Hawaiana</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/hawaiana3.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa Hawaiana</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/hawaiana4.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa Hawaiana</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="camisa">
+                            <img src="src/Camisas/leñador.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Camisa Le&ntilde;ador</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="accesorio">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Accesorios/Moños.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Mo&ntilde;o</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="accesorio">
+                            <img src="src/Accesorios/Barbijos.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Barbijos</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="accesorio">
+                            <img src="src/Accesorios/Cintos.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Cintos</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="accesorio">
+                            <img src="src/Accesorios/Gorros.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Gorros</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                         <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
-                            <img src="src/saco1.jpg" class="card-img-top" alt="primer-oferta">
-                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Articulo</h4>
+                            <img src="src/Street/Buzo Hilo.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Buzo Hilo</h4>
                             <div class="card-body py-1 text-white-50">
                                 <p class="card-text fs-5">Colores: </p>
                                 <p class="card-text fs-5">Talles: </p>
                             </div>
                         </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/Campera Gabardina.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Campera Gabardina</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/Cardigan.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Cardigan</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/Chombas.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Chombas</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/Parca.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Parca</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/RemeraModel2.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Remera Lisa</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark px-0 m-1" style="width: 18rem; display: none;" name="street">
+                            <img src="src/Street/remeramodel.jpg" class="card-img-top" alt="primer-oferta" style="width: 270px; height: 360px;">
+                            <h4 class="card-title pt-2 mb-0 text-white ffofertas fst-ulala">Remera Motivo</h4>
+                            <div class="card-body py-1 text-white-50">
+                                <p class="card-text fs-5">Colores: </p>
+                                <p class="card-text fs-5">Talles: </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -177,7 +606,7 @@
                 <div class="col-md-6 mb-md-0 mb-3">
                     <div class="container">
                         <div class="row">
-                            <h4 class="text-white-50">Contactanos en las redes:</h4>
+                            <h4 class="text-white-85">Contactanos en las redes:</h4>
                             <div class="col-md-12 my-3">
                                 <div class="mb-1 flex-center">
                                     <a class="btnredes mx-2" href="https://www.facebook.com/BetelNqn">

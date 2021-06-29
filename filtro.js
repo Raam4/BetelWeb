@@ -67,7 +67,7 @@ function verAll(){
 //de otras pag a productos
 
 function pasaParam(enl) {
-    enl.href = window.location.href + "&" + enl.href.split("?")[1];
+    enl = window.location.href + "&" + enl.split("?")[1];
 }
 
 function recuperaParam(name) {
